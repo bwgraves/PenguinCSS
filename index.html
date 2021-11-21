@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PenguinCSS</title>
+        <link href="./dist/penguin.css" rel="stylesheet" />
+        <style>
+            .container{
+                margin:0 auto;
+                text-align:left;
+                max-width:500px;
+            }
+
+            header{
+                text-align:center;
+                margin:2rem 0rem;
+            }
+
+            footer{
+                color:white;
+                margin-top:5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container pg-card pg-card-blue">
+            <header>
+                <h1 style="text-align:center;font-size:3rem;margin-top:0;margin-bottom:3rem;" class="card-title">PenguinCSS</h1>
+                <a class="pg-btn pg-btn-blue" href="https://github.com/bwgraves/penguincss">Github</a>
+            </header>
+            
+            <h2>About</h2>
+            <p>PenguinCSS is an extreamly basic <i>(lame way of saying it's a side project)</i> micro-CSS framework which provides components in the style of the Club Penguin UI.</p>
+            <p>So far there are only basic buttons and cards but I hope to add more components and styles soon.</p>
+            <h2>To-dos</h2>
+            <ul>
+                <li>Add a grid system</li>
+                <li>Modals</li>
+                <li>More colour buttons</li>
+                <li>Orange cards/modals</li>
+                <li>Form elements - including the orange checkboxes</li>
+                <li>Utility classes</li>
+            </ul>
+            <h2>Elements</h2>
+            <h3>Buttons</h3>
+            <button class="pg-btn pg-btn-blue">Play Now</button>
+            <h3>Cards</h3>
+            <div class="pg-card pg-card-blue" style="max-width:450px;margin-top:20px;">
+                <h3 class="card-title">Penguin CSS</h3>
+                <p style="margin-top:0;">You have found a Club Penguin inspired micro-CSS framework.<br>
+                Would you like to check it out on github?</p>
+                <div class="card-footer">
+                    <a href="https://github.com/bwgraves/penguincss" class="pg-btn pg-btn-blue">Yes</a>
+                    <a href="#" class="pg-btn pg-btn-blue" onclick="alert('Fair play')">No</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

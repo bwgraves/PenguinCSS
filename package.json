@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "sass --watch scss/penguin.scss dist/penguin.css"
+    "start": "sass --watch scss/penguin.scss dist/penguin.css",
     "build": "sass scss/penguin.scss dist/penguin.css"
   },
   "author": "",

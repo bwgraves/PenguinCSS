@@ -4,36 +4,48 @@
   border-radius: 10px;
   font-weight: 700;
   text-decoration: none;
-  font-size: 1.2em; }
-  .pg-btn.pg-btn-blue {
-    background-color: #007FD1;
-    color: white;
-    border: 0;
-    box-shadow: 0px 1px 0px 1.8px #003569, 2px 3px 0 1px #00CCFF, inset 1.4px 0px 0 0px #00CCFF, 0px 0px 0px 3px #00529F; }
-    .pg-btn.pg-btn-blue:hover {
-      background-color: #00529B; }
+  font-size: 1.2em;
+}
+.pg-btn.pg-btn-blue {
+  background-color: #007FD1;
+  color: white;
+  border: 0;
+  box-shadow: 0px 1px 0px 1.8px #003569, 2px 3px 0 1px #00CCFF, inset 1.4px 0px 0 0px #00CCFF, 0px 0px 0px 3px #00529F;
+}
+.pg-btn.pg-btn-blue:hover {
+  background-color: #00529B;
+}
 
 .pg-card {
   text-align: center;
   border-radius: 10px;
   padding: 2rem 5rem;
-  line-height: 1.2rem; }
-  .pg-card .card-title {
-    margin-top: 0;
-    font-family: Action Man, sans-serif;
-    font-size: 2rem; }
-  .pg-card .card-footer {
-    margin-top: 2.5rem; }
-    .pg-card .card-footer .pg-btn {
-      margin: 0 0.5rem; }
+  line-height: 1.2rem;
+}
+.pg-card .card-title {
+  margin-top: 0;
+  font-family: Action Man, sans-serif;
+  font-size: 2rem;
+}
+.pg-card .card-footer {
+  margin-top: 2.5rem;
+}
+.pg-card .card-footer .pg-btn {
+  margin: 0 0.5rem;
+}
 
 .pg-card-blue {
   background-color: #007FD1;
   border: 2px white;
-  box-shadow: 0 0 0 2px #00CCFF, 0 0 0 4px #0054A5, 0 0 0 6px #fff, 0 0 0px 8px rgba(240, 240, 240, 0.3); }
-  .pg-card-blue .card-title {
-    color: white;
-    -webkit-text-stroke: 2px #033568; }
+  box-shadow: 0 0 0 2px #00CCFF, 0 0 0 4px #0054A5, 0 0 0 6px #fff, 0 0 0px 8px rgba(240, 240, 240, 0.3);
+}
+.pg-card-blue .card-title {
+  color: white;
+  -webkit-text-stroke: 2px #033568;
+}
 
 body {
-  font-family: arial, sans-serif; }
+  font-family: arial, sans-serif;
+}
+
+/*# sourceMappingURL=penguin.css.map */

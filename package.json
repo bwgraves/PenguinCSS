@@ -1,15 +1,12 @@
 {
   "name": "penguincss",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "sass --watch scss/penguin.scss dist/penguin.css",
-    "build": "sass scss/penguin.scss dist/penguin.css"
-  },
-  "author": "",
+  "description": "A micro-CSS framework which provides components in the style of the Club Penguin UI.",
   "license": "ISC",
+  "scripts": {
+    "build": "cleancss -o dist/penguin.min.css css/penguin.css"
+  },
   "devDependencies": {
-    "sass": "^1.80.6"
+    "clean-css-cli": "^5.6.3"
   }
 }

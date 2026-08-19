@@ -1,14 +1,28 @@
+/*
+ * Card / modal
+ * Usage: <div class="pg-card pg-card-blue">…</div>
+ * The base .pg-card holds the layout; a colour modifier (.pg-card-blue,
+ * .pg-card-orange) supplies the palette via custom properties.
+ */
 .pg-card {
     text-align: center;
     border-radius: 10px;
     padding: 2rem 5rem;
     line-height: 1.2rem;
+    background-color: var(--pg-card-bg);
+    box-shadow:
+        0 0 0 2px var(--pg-card-ring-inner),
+        0 0 0 4px var(--pg-card-ring-outer),
+        0 0 0 6px #fff,
+        0 0 0 8px rgba(240, 240, 240, 0.3);
 }
 
 .pg-card .card-title {
     margin-top: 0;
     font-family: 'Action Man', sans-serif;
     font-size: 2rem;
+    color: var(--pg-card-title-color);
+    -webkit-text-stroke: 2px var(--pg-card-title-stroke);
 }
 
 .pg-card .card-footer {
@@ -19,17 +33,19 @@
     margin: 0 0.5rem;
 }
 
+/* Colour modifiers */
 .pg-card-blue {
-    background-color: #007FD1;
-    border: 2px white;
-    box-shadow:
-        0 0 0 2px #00CCFF,
-        0 0 0 4px #0054A5,
-        0 0 0 6px #fff,
-        0 0 0px 8px rgba(240, 240, 240, 0.3);
+    --pg-card-bg: #007FD1;
+    --pg-card-ring-inner: #00CCFF;
+    --pg-card-ring-outer: #0054A5;
+    --pg-card-title-color: white;
+    --pg-card-title-stroke: #033568;
 }
 
-.pg-card-blue .card-title {
-    color: white;
-    -webkit-text-stroke: 2px #033568;
+.pg-card-orange {
+    --pg-card-bg: #F5881D;
+    --pg-card-ring-inner: #FFC61B;
+    --pg-card-ring-outer: #C46512;
+    --pg-card-title-color: white;
+    --pg-card-title-stroke: #7A3808;
 }

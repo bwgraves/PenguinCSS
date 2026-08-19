@@ -1,22 +1,44 @@
+/*
+ * Button
+ * Usage: <button class="pg-btn pg-btn-blue">…</button>
+ * The base .pg-btn holds the shape; a colour modifier (.pg-btn-blue,
+ * .pg-btn-orange) supplies the palette via custom properties.
+ */
 .pg-btn {
     padding: 10px 50px;
     border-radius: 10px;
     font-weight: 700;
     text-decoration: none;
     font-size: 1.2em;
-}
-
-.pg-btn.pg-btn-blue {
-    background-color: #007FD1;
-    color: white;
     border: 0;
+    color: var(--pg-btn-fg);
+    background-color: var(--pg-btn-bg);
     box-shadow:
-        0px 1px 0px 1.8px #003569,
-        2px 3px 0 1px #00CCFF,
-        inset 1.4px 0px 0 0px #00CCFF,
-        0px 0px 0px 3px #00529F;
+        0px 1px 0px 1.8px var(--pg-btn-shadow),
+        2px 3px 0 1px var(--pg-btn-highlight),
+        inset 1.4px 0px 0 0px var(--pg-btn-highlight),
+        0px 0px 0px 3px var(--pg-btn-border);
 }
 
-.pg-btn.pg-btn-blue:hover {
-    background-color: #00529B;
+.pg-btn:hover {
+    background-color: var(--pg-btn-bg-hover);
+}
+
+/* Colour modifiers */
+.pg-btn-blue {
+    --pg-btn-fg: white;
+    --pg-btn-bg: #007FD1;
+    --pg-btn-bg-hover: #00529B;
+    --pg-btn-highlight: #00CCFF;
+    --pg-btn-shadow: #003569;
+    --pg-btn-border: #00529F;
+}
+
+.pg-btn-orange {
+    --pg-btn-fg: white;
+    --pg-btn-bg: #F5881D;
+    --pg-btn-bg-hover: #D2740F;
+    --pg-btn-highlight: #FFC61B;
+    --pg-btn-shadow: #A0490A;
+    --pg-btn-border: #C46512;
 }

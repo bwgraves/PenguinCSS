@@ -22,10 +22,33 @@
                 color:white;
                 margin-top:5rem;
             }
+
+            /* Docs-only: live preview above, code example below */
+            .example{
+                margin:1.5rem 0 2.5rem;
+            }
+
+            .example__preview{
+                margin-bottom:1rem;
+            }
+
+            .example__code{
+                margin:0;
+                padding:1rem 1.25rem;
+                background:#f4f4f6;
+                border-radius:8px;
+                overflow-x:auto;
+                font-size:0.85rem;
+                line-height:1.5;
+            }
+
+            .example__code code{
+                font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            }
         </style>
     </head>
     <body>
-        <div class="container pg-card pg-card-blue">
+        <div class="container">
             <header>
                 <h1 style="text-align:center;font-size:3rem;margin-top:0;margin-bottom:3rem;" class="card-title">PenguinCSS</h1>
                 <a class="pg-btn pg-btn-blue" href="https://github.com/bwgraves/penguincss">Github</a>
@@ -33,25 +56,80 @@
             
             <h2>About</h2>
             <p>PenguinCSS is a micro-CSS framework which provides components in the style of the Club Penguin UI.</p>
-            <p>So far there are only basic buttons and cards but I hope to add more components and styles soon.</p>
+            <p>So far there are basic buttons and cards in blue and orange, but I hope to add more components and styles soon.</p>
             <h2>To-dos</h2>
             <ul>
-                <li>More colour buttons</li>
-                <li>Orange cards/modals</li>
                 <li>Form elements - including the orange checkboxes</li>
             </ul>
+            <h2>Usage</h2>
+            <p>Copy the classes from any example below into your markup. Each
+            element comes in a blue and an orange flavour.</p>
+
             <h2>Elements</h2>
+
             <h3>Buttons</h3>
-            <button class="pg-btn pg-btn-blue">Play Now</button>
-            <h3>Cards</h3>
-            <div class="pg-card pg-card-blue" style="max-width:450px;margin-top:20px;">
-                <h3 class="card-title">Penguin CSS</h3>
-                <p style="margin-top:0;">You have found a Club Penguin inspired micro-CSS framework.<br>
-                Would you like to check it out on github?</p>
-                <div class="card-footer">
-                    <a href="https://github.com/bwgraves/penguincss" class="pg-btn pg-btn-blue">Yes</a>
-                    <a href="#" class="pg-btn pg-btn-blue" onclick="alert('Fair play')">No</a>
+            <div class="example">
+                <div class="example__preview">
+                    <button class="pg-btn pg-btn-blue">Play Now</button>
                 </div>
+                <pre class="example__code"><code>&lt;button class="pg-btn pg-btn-blue"&gt;
+    Play Now
+&lt;/button&gt;</code></pre>
+            </div>
+            <div class="example">
+                <div class="example__preview">
+                    <button class="pg-btn pg-btn-orange">Play Now</button>
+                </div>
+                <pre class="example__code"><code>&lt;button class="pg-btn pg-btn-orange"&gt;
+    Play Now
+&lt;/button&gt;</code></pre>
+            </div>
+
+            <h3>Cards</h3>
+            <div class="example">
+                <div class="example__preview">
+                    <div class="pg-card pg-card-blue">
+                        <h3 class="card-title">Penguin CSS</h3>
+                        <p style="margin-top:0;">You have found a Club Penguin inspired micro-CSS framework.<br>
+                        Would you like to check it out on github?</p>
+                        <div class="card-footer">
+                            <a href="https://github.com/bwgraves/penguincss" class="pg-btn pg-btn-blue">Yes</a>
+                            <a href="#" class="pg-btn pg-btn-blue" onclick="alert('Fair play')">No</a>
+                        </div>
+                    </div>
+                </div>
+                <pre class="example__code"><code>&lt;div class="pg-card pg-card-blue"&gt;
+    &lt;h3 class="card-title"&gt;Penguin CSS&lt;/h3&gt;
+    &lt;p&gt;You have found a Club Penguin
+    inspired micro-CSS framework.&lt;/p&gt;
+    &lt;div class="card-footer"&gt;
+        &lt;a class="pg-btn pg-btn-blue"&gt;Yes&lt;/a&gt;
+        &lt;a class="pg-btn pg-btn-blue"&gt;No&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="example">
+                <div class="example__preview">
+                    <div class="pg-card pg-card-orange">
+                        <h3 class="card-title">Are you sure?</h3>
+                        <p style="margin-top:0;">You are about to waddle away from this page.<br>
+                        Do you want to continue?</p>
+                        <div class="card-footer">
+                            <a href="#" class="pg-btn pg-btn-orange" onclick="alert('Waddle on')">Yes</a>
+                            <a href="#" class="pg-btn pg-btn-orange" onclick="alert('Phew')">No</a>
+                        </div>
+                    </div>
+                </div>
+                <pre class="example__code"><code>&lt;div class="pg-card pg-card-orange"&gt;
+    &lt;h3 class="card-title"&gt;Are you sure?&lt;/h3&gt;
+    &lt;p&gt;You are about to waddle away
+    from this page.&lt;/p&gt;
+    &lt;div class="card-footer"&gt;
+        &lt;a class="pg-btn pg-btn-orange"&gt;Yes&lt;/a&gt;
+        &lt;a class="pg-btn pg-btn-orange"&gt;No&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
             </div>
         </div>
     </body>

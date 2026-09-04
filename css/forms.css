@@ -1,0 +1,98 @@
+/*
+ * Form controls — text inputs & checkboxes
+ * Usage:
+ *   <input class="pg-input pg-input-blue" type="text">
+ *   <label class="pg-check">
+ *       <input type="checkbox"> Remember me
+ *   </label>
+ * The base class holds the shape; a colour modifier (…-blue, …-orange)
+ * supplies the palette via custom properties.
+ */
+
+/* Text input */
+.pg-input {
+    box-sizing: border-box;
+    padding: 6px 12px;
+    font-size: 1.5rem;
+    font-family: arial, sans-serif;
+    color: #111;
+    background-color: #fff;
+    border: 2px solid var(--pg-form-border);
+    border-radius: 4px;
+    outline: 0;
+}
+
+.pg-input::placeholder {
+    color: #9aa0a6;
+}
+
+.pg-input:focus {
+    box-shadow: 0 0 0 2px var(--pg-input-highlight);
+}
+
+/* Checkbox
+ * Wrap a native checkbox in a label carrying the colour modifier so the
+ * whole row is clickable and the box is styled via appearance: none.
+ */
+.pg-check {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    cursor: pointer;
+    user-select: none;
+}
+
+.pg-check input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    margin: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: #fff;
+    border: 2px solid #16213a;
+    border-radius: 4px;
+    cursor: pointer;
+    /* let the oversized tick spill out of the box */
+    overflow: visible;
+}
+
+/* Brush-stroke tick that bursts out of the top-right of the box, drawn as
+ * a tapered SVG checkmark and hidden until checked */
+.pg-check input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    left: -0.15rem;
+    top: -0.65rem;
+    width: 2rem;
+    height: 2rem;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23111' d='M35 92 6 60l13-13 18 20L84 6l10 9z'/%3E%3C/svg%3E") center / contain no-repeat;
+    opacity: 0;
+}
+
+.pg-check input[type="checkbox"]:checked {
+    background-color: #FFC61B;
+}
+
+.pg-check input[type="checkbox"]:checked::before {
+    opacity: 1;
+}
+
+.pg-check input[type="checkbox"]:focus-visible {
+    box-shadow: 0 0 0 2px #00CCFF;
+}
+
+/* Colour modifiers — text inputs only.
+ * The box outline is a shared dark navy in every flavour (as in-game); the
+ * modifier only tints the focus glow. */
+.pg-input-blue {
+    --pg-form-border: #16213a;
+    --pg-input-highlight: #00CCFF;
+}
+
+.pg-input-orange {
+    --pg-form-border: #16213a;
+    --pg-input-highlight: #FFC61B;
+}

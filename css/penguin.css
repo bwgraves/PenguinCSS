@@ -4,6 +4,7 @@
 /* Components */
 @import url('buttons.css');
 @import url('cards.css');
+@import url('forms.css');
 
 body {
     font-family: arial, sans-serif;

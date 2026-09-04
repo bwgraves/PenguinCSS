@@ -57,10 +57,6 @@
             <h2>About</h2>
             <p>PenguinCSS is a micro-CSS framework which provides components in the style of the Club Penguin UI.</p>
             <p>So far there are basic buttons and cards in blue and orange, but I hope to add more components and styles soon.</p>
-            <h2>To-dos</h2>
-            <ul>
-                <li>Form elements - including the orange checkboxes</li>
-            </ul>
             <h2>Usage</h2>
             <p>Copy the classes from any example below into your markup. Each
             element comes in a blue and an orange flavour.</p>
@@ -130,6 +126,39 @@
         &lt;a class="pg-btn pg-btn-orange"&gt;No&lt;/a&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+            </div>
+
+            <h3>Text inputs</h3>
+            <div class="example">
+                <div class="example__preview">
+                    <input class="pg-input pg-input-blue" type="text" placeholder="Penguin Name" value="microchip123">
+                </div>
+                <pre class="example__code"><code>&lt;input class="pg-input pg-input-blue"
+    type="text" placeholder="Penguin Name"&gt;</code></pre>
+            </div>
+            <div class="example">
+                <div class="example__preview">
+                    <input class="pg-input pg-input-orange" type="password" placeholder="Password" value="password1234">
+                </div>
+                <pre class="example__code"><code>&lt;input class="pg-input pg-input-orange"
+    type="password" placeholder="Password"&gt;</code></pre>
+            </div>
+
+            <h3>Checkboxes</h3>
+            <div class="example">
+                <div class="example__preview">
+                    <label class="pg-check">
+                        <input type="checkbox" checked> I promise to be nice to other penguins.
+                    </label>
+                    <br><br>
+                    <label class="pg-check">
+                        <input type="checkbox"> Waddle on and buy a puffle.
+                    </label>
+                </div>
+                <pre class="example__code"><code>&lt;label class="pg-check"&gt;
+    &lt;input type="checkbox" checked&gt;
+    I promise to be nice to other penguins.
+&lt;/label&gt;</code></pre>
             </div>
         </div>
     </body>
